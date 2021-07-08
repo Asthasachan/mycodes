@@ -32,4 +32,25 @@
 		    }
 		  //  return lrs(str,n,n,dp);
 		  return dp[n][n];
+			/*to print lrs
+			
+	string res="";
+    int i = n, j = n;
+    while (i > 0 && j > 0)
+    {
+        if (dp[i][j] == dp[i-1][j-1] + 1)
+        {
+           res = res + str[i-1];
+           i--;
+           j--;
+        }
+        else if (dp[i][j] == dp[i-1][j])
+            i--;
+        else
+            j--;
+    }
+    reverse(res.begin(), res.end())
+    return res;
+			*/
 		}
+
